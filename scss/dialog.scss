@@ -1,0 +1,71 @@
+#bs_grid-dialog-form {
+
+  // STEP 1.
+  .bs_grid-dialog-step--select {
+
+    .form-radios {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .form-item-num-columns {
+        margin: 0 0 10px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+      }
+
+      input {
+        display: none;
+
+        &:checked {
+          & ~ label {
+            background: powderblue;
+          }
+          &:disabled ~ label {
+            background: lightgrey;
+          }
+        }
+
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // STEP 2.
+  .bs_grid-dialog-step--layout {
+    .vertical-tabs {
+      display: flex;
+      margin: 0;
+
+      .vertical-tabs__menu {
+        float: none;
+        width: auto;
+        margin: 0;
+      }
+
+      .vertical-tabs__panes {
+        margin: 0;
+
+        input[type="radio"] {
+          position: relative;
+        }
+
+      }
+    }
+  }
+
+}
